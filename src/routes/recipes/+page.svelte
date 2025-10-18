@@ -1,14 +1,24 @@
 <script lang="ts">
+	import { Input } from '$lib/components/ui/input';
 	import type { PageData } from './$types';
 	import CornerDownRight from '@lucide/svelte/icons/corner-down-right';
 	let { data }: { data: PageData } = $props();
-	console.log({ data });
+
+	let searchString = $state('');
+	let filtered = $derived(
+		data.recipes.filter(
+			(recipe) =>
+				recipe.fields.tags.some((tag) => tag.toLowerCase().includes(searchString)) ||
+				recipe.fields.title.toLowerCase().includes(searchString)
+		)
+	);
 </script>
 
 <main class="prose dark:prose-invert">
-	<h1>Recipes Posts</h1>
+	<h1>Recipes</h1>
+	<Input placeholder="Search recipes..." bind:value={searchString} />
 	<ul>
-		{#each data.recipes as post (post.fields.slug)}
+		{#each filtered as post (post.fields.slug)}
 			<li>
 				<a href={`/recipes/${post.fields.slug}`}>{post.fields.title}</a>
 				<span>-</span>
