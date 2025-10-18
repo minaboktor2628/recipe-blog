@@ -52,6 +52,6 @@
 		"showdown": "^2.1.0"
 	},
 	"engines": {
-		"node": "v22.12"
+		"node": "v22.12.0"
 	}
 }
