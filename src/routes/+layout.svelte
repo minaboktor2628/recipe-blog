@@ -1,41 +1,21 @@
 <script lang="ts">
 	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
-	import favicon from '$lib/assets/favicon.svg';
-	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index';
-	import { navigationMenuTriggerStyle } from '$lib/components/ui/navigation-menu/navigation-menu-trigger.svelte';
-	import ModeToggle from '$lib/components/mode-toggle.svelte';
-	import { Separator } from '$lib/components/ui/separator/index';
-
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link
+		rel="icon"
+		href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZWYtaGF0LWljb24gbHVjaWRlLWNoZWYtaGF0Ij48cGF0aCBkPSJNMTcgMjFhMSAxIDAgMCAwIDEtMXYtNS4zNWMwLS40NTcuMzE2LS44NDQuNzI3LTEuMDQxYTQgNCAwIDAgMC0yLjEzNC03LjU4OSA1IDUgMCAwIDAtOS4xODYgMCA0IDQgMCAwIDAtMi4xMzQgNy41ODhjLjQxMS4xOTguNzI3LjU4NS43MjcgMS4wNDFWMjBhMSAxIDAgMCAwIDEgMVoiLz48cGF0aCBkPSJNNiAxN2gxMiIvPjwvc3ZnPg=="
+	/>
+	<title>Mina&apos;s Recipes</title>
 </svelte:head>
 
-<div class="flex h-screen flex-col">
-	<nav class="flex justify-between bg-background/95 p-4">
-		<NavigationMenu.Root>
-			<NavigationMenu.List>
-				<NavigationMenu.Item>
-					<NavigationMenu.Link href="/" class={navigationMenuTriggerStyle()}>
-						Home
-					</NavigationMenu.Link>
-				</NavigationMenu.Item>
-				<NavigationMenu.Item>
-					<NavigationMenu.Link href="/recipes" class={navigationMenuTriggerStyle()}>
-						Recipes
-					</NavigationMenu.Link>
-				</NavigationMenu.Item>
-			</NavigationMenu.List>
-		</NavigationMenu.Root>
-		<ModeToggle />
-	</nav>
-	<Separator />
-	<ModeWatcher />
-
-	<section class="flex-1 overflow-y-auto p-4">
-		{@render children()}
-	</section>
-</div>
+<ModeWatcher />
+<section class="flex-1 overflow-y-auto p-4">
+	{@render children()}
+</section>
+<p class="prose p-2 dark:prose-invert">
+	made with <span class="text-red-500">{'<3'}</span> by Mina Boktor
+</p>

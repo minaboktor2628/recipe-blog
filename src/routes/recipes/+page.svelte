@@ -15,12 +15,13 @@
 </script>
 
 <main class="prose dark:prose-invert">
-	<h1>Recipes</h1>
-	<Input placeholder="Search recipes..." bind:value={searchString} />
+	<h1>Mina&apos;s Recipes</h1>
+	<p>Images coming soon!</p>
+	<Input placeholder="Search recipes... (e.g. 'vegan')" bind:value={searchString} />
 	<ul>
 		{#each filtered as post (post.fields.slug)}
 			<li>
-				<a href={`/recipes/${post.fields.slug}`}>{post.fields.title}</a>
+				<a href={`/recipes/${post.fields.slug}`} dir="ltr">{post.fields.title}</a>
 				<span>-</span>
 				<p class="inline">{post.fields.date}</p>
 				<p class="mt-0 line-clamp-1">
