@@ -2,7 +2,7 @@
 title: 'Basbousa - بسبوسة'
 date: '2025-10-18'
 slug: 'basbousa-dessert'
-tags: ['dessert', 'vegeratian', 'besbousa']
+tags: ['dessert', 'vegeratian']
 brief: 'A sweet semolina cake'
 ---
 
@@ -17,7 +17,7 @@ brief: 'A sweet semolina cake'
 
 - In a bowl, first mix the dry ingredients:
   - 2 cups of semolina flour
-  - 1 cup shredded desiccated/shredded coconut (optional but very yummy)
+  - 1 cup shredded desiccated/shredded coconut (optional but not really)
   - $\frac{3}{4}$ cups of sugar
   - 1 tsp baking powder
   - A pinch of salt

@@ -16,8 +16,8 @@
 
 <main class="prose dark:prose-invert">
 	<h1>Mina&apos;s Recipes</h1>
-	<p>Images coming soon!</p>
-	<Input placeholder="Search recipes... (e.g. 'vegan')" bind:value={searchString} />
+	<p>Images coming soon! (when I cook them again, lol)</p>
+	<Input placeholder="Search recipes... (e.g. 'vegan', 'dessert')" bind:value={searchString} />
 	<ul>
 		{#each filtered as post (post.fields.slug)}
 			<li>

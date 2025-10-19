@@ -4,7 +4,6 @@
 	import katex from 'katex';
 	import 'katex/dist/katex.min.css';
 	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
-	import Separator from '$lib/components/ui/separator/separator.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -39,7 +38,7 @@
 	</a>
 </nav>
 
-<main>
+<main class="flex flex-col items-center">
 	<article class="prose pt-8 dark:prose-invert">
 		<h1>{data.post.fields.title}</h1>
 		<p><i>Posted on: {data.post.fields.date}</i></p>

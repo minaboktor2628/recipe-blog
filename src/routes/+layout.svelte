@@ -16,6 +16,6 @@
 <section class="flex-1 overflow-y-auto p-4">
 	{@render children()}
 </section>
-<p class="prose p-2 dark:prose-invert">
-	made with <span class="text-red-500">{'<3'}</span> by Mina Boktor
+<p class="prose p-4 dark:prose-invert">
+	made with <span class="text-red-500">&lt;3</span> by Mina Boktor
 </p>
